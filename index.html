@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
     <!-- Vue -->
-
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900& display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
@@ -55,10 +58,10 @@
                         <img src="img/avatar_1.jpg" alt="">
                         <div class="text-avatar">
                             <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p>12:00</p>
+                            <p class="light-c">12:00</p>
                         </div>
                     </div>
 
@@ -66,10 +69,10 @@
                         <img src="img/avatar_2.jpg" alt="">
                         <div class="text-avatar">
                             <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p>12:00</p>
+                            <p class="light-c">12:00</p>
                         </div>
                     </div>
 
@@ -77,10 +80,10 @@
                         <img src="img/avatar_3.jpg" alt="">
                         <div class="text-avatar">
                             <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p>12:00</p>
+                            <p class="light-c">12:00</p>
                         </div>
                     </div>
 
@@ -88,10 +91,10 @@
                         <img src="img/avatar_4.jpg" alt="">
                         <div class="text-avatar">
                             <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p>12:00</p>
+                            <p class="light-c">12:00</p>
                         </div>
                     </div>
 
@@ -99,15 +102,60 @@
                         <img src="img/avatar_5.jpg" alt="">
                         <div class="text-avatar">
                             <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p>12:00</p>
+                            <p class="light-c">12:00</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="user-right"></div>
+            <!-- __________ -->
+            <!-- User Right -->
+            <div class="user-right">
+                <!-- Right menu -->
+                <div class="right-menu">
+                    <div class="avatar-right">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <div class="textmenu-right">
+                            <h4>Michele</h4>
+                            <p class="light-c">Ultimo accesso oggi alle 12.00</p>
+                        </div>
+                    </div>
+                    <div class="choicemenu-right">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <!-- Print message -->
+                <div class="message-print">
+                    
+                        <!-- Row -->
+                        <div class="p-message mb-1">
+                            <div class="rx-message">
+                                <p>Hai portato a spasso il cane?</p>
+                                <p class="time-mx">15.30</p>
+                            </div>
+                        </div>
+
+                        <div class="p-message mb-1">
+                            <div class="sx-message">
+                                <p>Hai portato a spasso il cane?</p>
+                                <p class="time-mx">15.30</p>
+                            </div>
+                        </div>
+                </div>
+                <!-- Form send -->
+                <div class="form-send">
+                    <i class="fa-regular fa-face-smile"></i>
+                    
+                    <label for="send-message">invia</label>
+                    <input type="text" name="" id="send-message" placeholder="Scrivi un messaggio">
+
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
         </div>
     </main>
 
