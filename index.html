@@ -7,6 +7,8 @@
     <title>Boolzapp</title>
     <!-- Vue -->
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,10 +18,96 @@
         <div class="top-back"></div>
         <div class="bottom-back"></div>
         <!-- Container-user -->
-        <div class="container-user">
-            <div id="app">
-                
+        <div id="app">
+            <div class="user-left">
+                <!-- Menu top visualizzazione -->
+                <div class="menu-left">
+                    <div class="avatar-menu">
+                        <img src="img/avatar_io.jpg" alt="avatar-menu">
+                        <h4>Sofia</h4>
+                    </div>
+                    <div class="avatar-choice">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <!-- Notification -->
+                <div class="notification-bell">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="text-notification">
+                        <h4>Ricevi notifiche di nuovi messaggi</h4>
+                        <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- Form Text search user -->
+                <div class="form-search">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <label for="search-user">search</label>
+                    <input type="text" name="" id="search-user" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!-- Users message -->
+                <div class="user-message">
+                    <div class="single-avatar">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <div class="text-avatar">
+                            <h3>Michele</h3>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div class="time-message">
+                            <p>12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="single-avatar">
+                        <img src="img/avatar_2.jpg" alt="">
+                        <div class="text-avatar">
+                            <h3>Michele</h3>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div class="time-message">
+                            <p>12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="single-avatar">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div class="text-avatar">
+                            <h3>Michele</h3>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div class="time-message">
+                            <p>12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="single-avatar">
+                        <img src="img/avatar_4.jpg" alt="">
+                        <div class="text-avatar">
+                            <h3>Michele</h3>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div class="time-message">
+                            <p>12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="single-avatar">
+                        <img src="img/avatar_5.jpg" alt="">
+                        <div class="text-avatar">
+                            <h3>Michele</h3>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div class="time-message">
+                            <p>12:00</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="user-right"></div>
         </div>
     </main>
 

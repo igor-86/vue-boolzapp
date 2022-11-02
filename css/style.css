@@ -4,9 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Typography */
+a {
+    color: #0a0a0a92;
+}
 
 /* Container */
-main.container {
+.container {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -14,15 +18,141 @@ main.container {
 }
 .top-back {
     width: 100%;
-    height: 20%;
-    background-color: aqua;
+    height: 15%;
+    background-color: #00bea4;
+    z-index: 5;
+    position: relative;
 }
 .bottom-back {
     width: 100%;
-    height: 80%;
-    background-color: grey;
+    height: 85%;
+    background-color: #d5d9d4;
+    z-index: 5;
+    position: relative
 }
 
 /* Container user */
+#app {
+    position: absolute;
+    max-width: 1300px;
+    width: 100%;
+    height: 95vh;
+    background-color:whitesmoke;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 100;
+}
 
+#app > .user-left {
+    width: 30%;
+    height: 100%;
+    border: 1px solid red;
+}
+/* Menu left Top */
+.user-left > .menu-left {
+    width: 100%;
+    height: 60px;
+    background-color: #ebeceb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-left > .avatar-menu {
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.avatar-menu > img {
+    width: 50%;
+    border-radius: 50%;
+}
+.menu-left > .avatar-choice {
+    width: 30%;
+    border: 1px solid black;
+    text-align: end;
+}
+.avatar-choice i {
+    font-size: 1.5rem;
+    color: #c4c4c4;
+    margin-right: 0.5em;
+}
+/* Notification bells */
+.notification-bell {
+    width: 100%;
+    height: 80px;
+    background-color: #a1e0fd;;
+    padding: 0.3rem .8rem;
+    display: flex;
+    align-items: center;
+}
+.notification-bell > i {
+    margin-right: 0.5em;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+    color: #a1e0fd;
+    line-height: 50px;
+    border-radius: 50%;
+}
+.text-notification > h4 {
+    font-weight: 500;
+}
+
+/* Form search */
+.form-search {
+    width: 100%;
+    height: 40px;
+    padding: .2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.form-search > .search-icon {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #efefef;
+    border-right: none;
+}
+.search-icon > i {
+    color: #c4c4c4;
+}
+.form-search > label {
+    display: none;
+}
+.form-search > input {
+    width: 85%;
+    border: 1px solid #efefef;
+    padding: .5rem;
+}
+
+/* User message */
+.user-message {
+    width: 100%;
+    overflow-y: scroll;
+}
+.single-avatar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: .3rem .8rem;
+    border-bottom: 1px solid #cccccc;
+}
+.single-avatar > img {
+    width: 20%;
+    border-radius: 50%;
+}
+.single-avatar > .text-avatar {
+    margin-left: .8em;
+}
+.single-avatar > .time-message {
+    margin-left: auto;
+}
 
