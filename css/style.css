@@ -146,6 +146,7 @@ a {
 /* User message */
 .user-message {
     width: 100%;
+    height: calc(100% - 180px);
     overflow-y: scroll;
 }
 .single-avatar {

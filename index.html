@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
     <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,54 +56,10 @@
                 </div>
                 <!-- Users message -->
                 <div class="user-message">
-                    <div class="single-avatar">
-                        <img src="img/avatar_1.jpg" alt="">
+                    <div class="single-avatar" v-for="(inner, index) in contacts">
+                        <img :src="'img/avatar'+ inner.avatar + '.jpg'" alt="">
                         <div class="text-avatar">
-                            <h3>Michele</h3>
-                            <p class="light-c">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time-message">
-                            <p class="light-c">12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-avatar">
-                        <img src="img/avatar_2.jpg" alt="">
-                        <div class="text-avatar">
-                            <h3>Michele</h3>
-                            <p class="light-c">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time-message">
-                            <p class="light-c">12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-avatar">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div class="text-avatar">
-                            <h3>Michele</h3>
-                            <p class="light-c">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time-message">
-                            <p class="light-c">12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-avatar">
-                        <img src="img/avatar_4.jpg" alt="">
-                        <div class="text-avatar">
-                            <h3>Michele</h3>
-                            <p class="light-c">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time-message">
-                            <p class="light-c">12:00</p>
-                        </div>
-                    </div>
-
-                    <div class="single-avatar">
-                        <img src="img/avatar_5.jpg" alt="">
-                        <div class="text-avatar">
-                            <h3>Michele</h3>
+                            <h3>{{inner.name}}</h3>
                             <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
