@@ -1,0 +1,28 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+main.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+.top-back {
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+}
+.bottom-back {
+    width: 100%;
+    height: 80%;
+    background-color: grey;
+}
+
+/* Container user */
+
+
