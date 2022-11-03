@@ -167,7 +167,7 @@ createApp({
                 ],
             }
         ],
-        
+        inMessage: "",
         
     };
   },
@@ -175,21 +175,13 @@ createApp({
     newChat: function(clicked){
         this.activeContacts = clicked;
     },
-
-    /* openChat: function(){
-        const control = this.contacts;
-        for(let i = 0; i < control.length; i++){
-        
-        const object = control[i].messages;
-        
-        for(let j = 0; j < object.length; j++){
-            console.log(object[j].message);
+    addMessage: function(){
+        if(this.inMessage){
+            this.contacts[activeContacts].messages.push({message:this.inMessage});
+            this.inMessage="";
         }
-        
-    }
-    }, */
-   
-  },
+    },
+    },
   created: function() {
     const control = this.contacts;
     for(let i = 0; i < control.length; i++){
@@ -200,6 +192,6 @@ createApp({
         console.log(object[j].message);
     }
     
-}
+    }
   }
 }).mount("#app");
