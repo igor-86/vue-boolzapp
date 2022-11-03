@@ -68,6 +68,7 @@
                     v-for="(inner, index) in contacts" 
                     @click="newChat(index)"
                     v-show="searchList === '' || inner.name.includes(searchList)"
+                    :class="{'active': index === activeContacts}"
                     >
                         <img :src="'img/avatar'+ inner.avatar + '.jpg'" alt="">
                         <div class="text-avatar">
