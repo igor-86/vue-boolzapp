@@ -1,9 +1,11 @@
 const { createApp } = Vue;
+const dt = luxon.DateTime;
 
 createApp({
   data() {
     return {
         activeContacts : 0,
+        now:"",
         contacts: [
             {
                 name: 'Michele',
@@ -172,26 +174,26 @@ createApp({
     };
   },
   methods: {
-    newChat: function(clicked){
+    newChat(clicked){
         this.activeContacts = clicked;
     },
-    addMessage: function(){
+    addMessage(){
         if(this.inMessage){
-            this.contacts[this.activeContacts].messages.push({message:this.inMessage});
+            this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+
+            this.contacts[this.activeContacts].messages.push({message:this.inMessage, status:'sent', date:this.now});
             this.inMessage="";
+            this.now="";
+            setTimeout(this.restMessage, 1000);
         }
     },
+    restMessage(){
+        this.now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        this.contacts[this.activeContacts].messages.push({message:'bravo bravo...', status:'received', date:this.now});
+        
     },
+   },
   created: function() {
-    const control = this.contacts;
-    for(let i = 0; i < control.length; i++){
     
-    const object = control[i].messages;
-    
-    for(let j = 0; j < object.length; j++){
-        console.log(object[j].message);
-    }
-    
-    }
   }
 }).mount("#app");
