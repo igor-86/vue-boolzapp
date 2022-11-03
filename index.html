@@ -55,12 +55,20 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <label for="search-user">search</label>
-                    <input type="text" name="" id="search-user" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text"
+                     id="search-user" 
+                     placeholder="Cerca o inizia una nuova chat"
+                     v-model.trim="searchList"
+                     >
                 </div>
 
                 <!-- Users message -->
                 <div class="user-message">
-                    <div class="single-avatar" v-for="(inner, index) in contacts" @click="newChat(index)">
+                    <div class="single-avatar" 
+                    v-for="(inner, index) in contacts" 
+                    @click="newChat(index)"
+                    v-show="searchList === '' || inner.name.includes(searchList)"
+                    >
                         <img :src="'img/avatar'+ inner.avatar + '.jpg'" alt="">
                         <div class="text-avatar">
                             <h3>{{inner.name}}</h3>

@@ -170,7 +170,7 @@ createApp({
             }
         ],
         inMessage: "",
-        
+        searchList:"",
     };
   },
   methods: {

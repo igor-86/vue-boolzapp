@@ -162,6 +162,9 @@ a {
     height: 70px;
     border-radius: 50%;
 }
+.active {
+    background-color: rgb(235, 235, 235);
+}
 .single-avatar > .text-avatar {
     margin-left: .8em;
 }
