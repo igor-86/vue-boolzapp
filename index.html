@@ -46,6 +46,7 @@
                         <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
+
                 <!-- Form Text search user -->
                 <div class="form-search">
                     <div class="search-icon">
@@ -54,9 +55,10 @@
                     <label for="search-user">search</label>
                     <input type="text" name="" id="search-user" placeholder="Cerca o inizia una nuova chat">
                 </div>
+
                 <!-- Users message -->
                 <div class="user-message">
-                    <div class="single-avatar" v-for="(inner, index) in contacts">
+                    <div class="single-avatar" v-for="(inner, index) in contacts" @click="newChat(index)">
                         <img :src="'img/avatar'+ inner.avatar + '.jpg'" alt="">
                         <div class="text-avatar">
                             <h3>{{inner.name}}</h3>
@@ -69,14 +71,15 @@
                 </div>
             </div>
             <!-- __________ -->
+
             <!-- User Right -->
             <div class="user-right">
                 <!-- Right menu -->
                 <div class="right-menu">
                     <div class="avatar-right">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="`img/avatar${contacts[activeContacts].avatar}.jpg`" alt="">
                         <div class="textmenu-right">
-                            <h4>Michele</h4>
+                            <h4>{{contacts[activeContacts].name}}</h4>
                             <p class="light-c">Ultimo accesso oggi alle 12.00</p>
                         </div>
                     </div>
@@ -86,6 +89,7 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
+
                 <!-- Print message -->
                 <div class="message-print">
                     
@@ -99,11 +103,12 @@
 
                         <div class="p-message mb-1">
                             <div class="sx-message">
-                                <p>Hai portato a spasso il cane?</p>
+                                <p>Ok!</p>
                                 <p class="time-mx">15.30</p>
                             </div>
                         </div>
                 </div>
+
                 <!-- Form send -->
                 <div class="form-send">
                     <i class="fa-regular fa-face-smile"></i>

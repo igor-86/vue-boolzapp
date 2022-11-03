@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+        activeContacts : 0,
         contacts: [
             {
                 name: 'Michele',
@@ -165,17 +166,40 @@ createApp({
                     }
                 ],
             }
-        ]
+        ],
+        
         
     };
   },
   methods: {
-    
+    newChat: function(clicked){
+        this.activeContacts = clicked;
+    },
+
+    /* openChat: function(){
+        const control = this.contacts;
+        for(let i = 0; i < control.length; i++){
+        
+        const object = control[i].messages;
+        
+        for(let j = 0; j < object.length; j++){
+            console.log(object[j].message);
+        }
+        
+    }
+    }, */
    
   },
   created: function() {
-    for(let i = 0; i < this.contacts.length; i++){
-        console.log(this.contacts[i].na);
+    const control = this.contacts;
+    for(let i = 0; i < control.length; i++){
+    
+    const object = control[i].messages;
+    
+    for(let j = 0; j < object.length; j++){
+        console.log(object[j].message);
     }
+    
+}
   }
 }).mount("#app");
