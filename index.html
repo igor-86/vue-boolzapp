@@ -68,7 +68,7 @@
                     v-for="(inner, index) in contacts" 
                     @click="newChat(index)"
                     v-show="searchList === '' || inner.name.includes(searchList)"
-                    :class="{'active': index === activeContacts}"
+                    :class="index === activeContacts ? 'active':'single-avatar'"
                     >
                         <img :src="'img/avatar'+ inner.avatar + '.jpg'" alt="">
                         <div class="text-avatar">
@@ -76,7 +76,7 @@
                             <p class="light-c">Ultimo messaggio inviato</p>
                         </div>
                         <div class="time-message">
-                            <p class="light-c">12:00</p>
+                            <p class="light-c">{{inner.messages[0].date.slice(11,16)}}</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <img :src="`img/avatar${contacts[activeContacts].avatar}.jpg`" alt="">
                         <div class="textmenu-right">
                             <h4>{{contacts[activeContacts].name}}</h4>
-                            <p class="light-c">Ultimo accesso oggi alle 12.00</p>
+                            <p class="light-c">Ultimo accesso oggi {{contacts[activeContacts].messages[0].date.slice(11,16)}}</p>
                         </div>
                     </div>
                     <div class="choicemenu-right">
